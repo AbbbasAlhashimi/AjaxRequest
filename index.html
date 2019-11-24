@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Exercise</title>
+        <style type='text/css'>
+            body { font-family: Calibri, DejaVu Sans, sans-serif; }
+            #response { background-color: #ffffc0; width:250px; height:300px; overflow:scroll; }
+        </style>
+
+        <script type='text/javascript'>
+            
+		
+			  function jsonrequest() {
+                var xhr2 = new XMLHttpRequest();
+    
+                xhr2.addEventListener ("load", receivedData);
+                    
+                var artist = document.getElementById("artist").value;
+
+                xhr2.open("GET", "http://localhost/11-AJAX_Request/JSON_Fetch.php?artist=" + artist);
+                xhr2.send();
+				
+				
+		 
+ 
+			}
+			
+            function receivedData(e) {
+                
+                var data=JSON.parse(e.target.responseText);
+				var html = "";
+				
+                for (var i=0; i<data.length; i++)
+               {
+                  html+= data[i].artist + "<br>";  
+				  html+= data[i].song  + "<br>";
+				  html+= data[i].chart + "<br><br>";
+               }
+			  
+               document.getElementById("response").innerHTML = html;   
+            }
+			
+        </script>
+    </head>
+    
+    <body>
+        Artist:
+        <input type='text' id='artist' value="" />
+        <input type='button' value='Search' onclick='jsonrequest()'/>   
+        <div id='response'></div>
+    </body>
+    
+</html>
