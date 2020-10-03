@@ -1,4 +1,4 @@
-The project consists of the following:
+The project consists of the following:<br>
 1- Index page with an input form and an output Paragraph area. <br>
 2- PHP service to perform a simple call select statement and return data if existed.<br>
 3- SQL database where records are saved.<br><br>
