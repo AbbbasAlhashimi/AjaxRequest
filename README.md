@@ -3,7 +3,7 @@ The project consists of the following:<br>
 2- PHP service to perform a simple call select statement and return data if existed.<br>
 3- SQL database where records are saved.<br><br>
 
-The service calls back albums based on the artist name. The fetch request scan the database for records that matches the request query. Once data are fetched, they're passed into the innerHTML to be displayed accordingly. NO Bootstrap styling used, only simple highlights for the input and output sections were done.
+The service calls back albums based on the artist name. The fetch request scan the database for records that matches the request query. Once data are fetched, they're passed into the innerHTML to be displayed accordingly. NO Bootstrap styling was used; only simple highlights for the input and output sections were done.
 <br><br>
 Text Editor: Sublime Text<br>
 Server: IIS / Xampp<br>
